@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הספר החדש שלי</title>
+<style>
+:root {
+  --main: #183d36;
+  --accent: #d6ad70;
+  --bg: #f8f5ef;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #26332e;
+  background: var(--bg);
+  line-height: 1.7;
+}
+button { cursor: pointer; }
+.hero {
+  padding: 75px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 65px;
+  flex-wrap: wrap;
+  background: var(--main);
+  color: white;
+  text-align: right;
+}
+.hero img {
+  width: 280px;
+  max-width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px #0005;
+}
+.hero-content { max-width: 520px; }
+h1 { font-size: clamp(38px, 6vw, 65px); line-height: 1.15; }
+h2 { font-size: 32px; color: var(--main); }
+.eyebrow { color: var(--accent); font-weight: bold; }
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #1d2924;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 18px;
+}
+section { padding: 65px 8%; text-align: center; }
+.content { max-width: 850px; margin: auto; }
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.feature {
+  background: white;
+  padding: 25px;
+  border-radius: 9px;
+}
+.quote {
+  background: #eee7da;
+  font-size: 23px;
+  font-style: italic;
+}
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+  text-align: right;
+}
+.author img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.purchase {
+  background: var(--main);
+  color: white;
+}
+.purchase h2 { color: white; }
+.price { font-size: 42px; color: var(--accent); }
+footer { text-align: center; padding: 25px; }
+[contenteditable="true"] { outline: none; }
+[contenteditable="true"]:focus {
+  outline: 2px dashed var(--accent);
+}
+.editor {
+  background: #fff;
+  padding: 22px;
+  border-bottom: 3px solid var(--accent);
+}
+.editor h2 { font-size: 22px; }
+.editor label { display:block; margin:12px 0 5px; }
+.editor input, .editor select {
+  width:100%; padding:10px; border:1px solid #ccc;
+  border-radius:5px;
+}
+.editor button {
+  margin-top:15px; padding:12px 20px;
+  background:var(--main); color:white;
+  border:0; border-radius:5px;
+}
+@media(max-width:600px) {
+  .hero { padding:45px 6%; gap:25px; text-align:center; }
+  section { padding:45px 6%; }
+}
+</style>
+</head>
+<body>
+
+<!-- EDITOR: לשימוש בעת הכנת הדף -->
+
+
+<header class="hero">
+  <img src="https://placehold.co/560x760/ddd/333?text=YOUR+BOOK" alt="כריכת הספר">
+  <div class="hero-content">
+    <div class="eyebrow">הספר החדש שכולם מדברים עליו</div>
+    <h1>שם הספר</h1>
+    <p>
+      משפט שיווקי מרגש שמספר לקוראים למה הספר הזה נועד בדיוק עבורם.
+    </p>
+    <a class="cta" href="#purchase">אני רוצה את הספר!</a>
+  </div>
+</header>
+
+<section>
+  <div class="content">
+    <h2>הסיפור שמחכה לכם בין הדפים</h2>
+    <p>
+      כאן כותבים את תיאור הספר. אפשר להציג את העלילה,
+      את הרעיון המרכזי, את הערך שהקורא יקבל ואת הסיבה
+      שבגללה כדאי לו לקרוא דווקא אותו.
+    </p>
+    <div class="features">
+      <div class="feature">
+        <h3>תובנות חדשות</h3>
+        <p>תוכן שיעורר מחשבה וייתן השראה.</p>
+      </div>
+      <div class="feature">
+        <h3>חוויה מיוחדת</h3>
+        <p>מסע מרתק בין רעיונות וסיפורים.</p>
+      </div>
+      <div class="feature">
+        <h3>ערך אמיתי</h3>
+        <p>משהו לקחת איתכם גם אחרי הקריאה.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="content">
+    <p>
+      "כאן אפשר לשלב משפט בלתי נשכח מתוך הספר
+      שיגרום לקוראים לרצות לגלות עוד."
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="author">
+    <img src="https://placehold.co/400x400/e5ded2/333?text=AUTHOR" alt="תמונת המחבר">
+    <div style="max-width:500px">
+      <h2>קצת על המחבר</h2>
+      <p>
+        כאן מספרים על המחבר, על הרקע שלו,
+        על הדרך שהובילה לכתיבת הספר ועל ההשראה מאחוריו.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="purchase" id="purchase">
+  <div class="content">
+    <h2>העותק שלכם מחכה לכם</h2>
+    <p>הזמינו עכשיו והצטרפו למסע.</p>
+    <div class="price">₪89</div>
+    <p>משלוח ותנאי רכישה בהתאם לפרטים שלכם</p>
+    <a class="cta" id="buyButton" href="mailto:your@email.com?subject=הזמנת הספר">לרכישת הספר עכשיו</a>
+  </div>
+</section>
+
+<footer>
+  <p>© כל הזכויות שמורות למחבר הספר</p>
+  <p>יצירת קשר: your@email.com</p>
+</footer>
+
+<script>
+function changeImage(img) {
+  const picker = document.createElement('input');
+  picker.type = 'file';
+  picker.accept = 'image/*';
+  picker.onchange = () => {
+    const file = picker.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => img.src = reader.result;
+    reader.readAsDataURL(file);
+  };
+  picker.click();
+}
+
+function savePage() {
+  const editor = document.getElementById('editor');
+  editor.remove();
+  document.querySelectorAll('[contenteditable]')
+    .forEach(el => el.removeAttribute('contenteditable'));
+  document.querySelectorAll('img').forEach(img =>
+    img.removeAttribute('onclick'));
+  const html = '<!DOCTYPE html>\n' +
+    document.documentElement.outerHTML;
+  const blob = new Blob([html], {type:'text/html;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'book-landing-page.html';
+  a.click();
+  URL.revokeObjectURL(url);
+  location.reload();
+}
+</script>
+
+
+</body></html>
